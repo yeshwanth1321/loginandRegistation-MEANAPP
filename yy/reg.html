@@ -1,0 +1,158 @@
+ <!DOCTYPE html> 
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> registation</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animated.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   
+</head>
+<body>
+
+
+<!--  for the heade section  -->
+<div class="container-fluid">
+  <div class="row" id="header-section">
+    <div class="col-md-3" id="site_logo">
+      
+    </div>
+    <div class="col-md-5 animated fadeInLeft" id="site_title">
+      <h2> Alumni</h2>
+    </div>
+<div class="col-md-4">
+      <form name="search-form">
+        <div class="form-group">
+        <input type="text" name="search_bar" class="form-control" placeholder="Search here" id="search_box">
+        <button class="btn btn-primary" id="search_button">Search</button>
+
+      </div>
+      </form>
+      
+    </div>
+  </div>
+  
+</div>
+<!-- end of the header section  -->
+
+<!-- color band-->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+    </div>
+    <ul class="nav navbar-nav">
+      <li clas><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">About us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- example of registration page -->
+  <div class="registration">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 reg">
+          
+
+          <h2>Registration  </h2>
+          <hr>
+          <form action="http://localhost/aes/u.php" method="post"> 
+
+
+            <div class="form-group">
+              <label for="name" class="col-sm-5 control-label">First Name</label>
+              <input type="text" class="form-inline" name="fname" placeholder="Enter your First Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="name" class="col-sm-5 control-label"> Last Name</label>
+              <input type="text" class="form-inline" name="lname" placeholder="Enter your Last Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="name" class="col-sm-5 control-label">Email</label>
+              <input type="text" class="form-inline" placeholder="Enter a valid email address" name="email"  required>
+            </div>
+
+
+             <div class="form-group">
+              <label for="name" class="col-sm-5 control-label">Password</label>
+              <input type="password" class="form-inline"   placeholder="Enter a valid password" name="pwd"  required>
+            </div>
+
+
+
+             <div class="form-group">
+              <label for="name" class="col-sm-5 control-label">ConfirmPassword</label>
+              <input type="password" class="form-inline" placeholder="Enter a valid password" name="cpwd"  required>
+            </div>
+
+
+
+             <div class="form-group">
+              <label for="name" class="col-sm-5 control-label">DateofBirth</label>
+              <input type="date" class="form-inline" name="dob" value ="2000-12-12" required>
+            </div>
+
+            <script>
+              function myfunction() {
+                var x = document.getElementById("mydate").value;
+                document.getElementById("demo").innerhtml = x;
+              }
+            </script>
+
+
+            
+            
+            <div class="form-group">
+            <label for="sel1" class="col-sm-5 control-label">Passing Year</label>
+            <select class="form-inline" id="sel1" name="pyear"  required>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+           </select>
+         </div>
+
+           
+
+              <button type="register" class="btn-btn-default" id="su_b">Submit</button>  
+            </form>
+          
+        </div>
+        <div class="col-md-3">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid" id="footer_bar">
+  <h2> 
+  <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://plus.google.com" class="google"><i class="fa fa-google-plus"></i></a>
+  <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin-square"></i></a></h2>
+</div>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<html>
+ <head>
+  <title>Registration Page</title>
+   <h1 style="color:orangered; font-weight:bold;"  >REGISTRATION CONTD....</h1>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+ </head>
+    <body>
+ 	  
+    <div class="container form_class">
+<!--     	<div class="row">
+    		<div class="col-md-3"></div>
+    		<div class="col-md-3">aome text</div>
+    		<div class="col-md-3"></div>
+    	</div> -->
+      
+        <form name="registerform" action="http://localhost/aes/secondpage.php" method="post" onsubmit="return valid()">
+        
+      	<div class="row center dropdown_for_present_status">
+      		<div class="col-md-4">
+      			Present Status
+      		</div>
+      		<div>
+      			<select  onchange=getFields(); name="present" id="fields">
+		            <option value="0">--select--</option>
+                <option value="Entrepreneur">Entrepreneur</option>
+		            <option value="Employee">Employee</option>
+	                <option value="Student">Student</option>
+	                <option value="Homemaker">Homemaker</option>
+	                <option value="Retired">Retired</option>
+                </select>	
+      		</div>
+      	</div>
+
+        <!-- <table align=center>
+          <tr>
+              <td><label>Present Status</td>
+              <td>
+              	<select  onchange=getFields(); name="PresentStatus" id="fields">
+		            <option value="0">--select--</option>
+		            <option value="Employee">Employee</option>
+	                <option value="Entrepreneur">Entrepreneur</option>
+	                <option value="Retired">Retired</option>
+	                <option value="Homemaker">Homemaker</option>
+	                <option value="Student">Student</option>
+                </select>
+               </td>
+             </tr>
+         </table> -->
+    <br/>
+
+    <center>
+	    <div id="student" style="display:none;color:brown">
+	        STUDENT DETAILS
+	        <table>
+	            <tr>
+	                <td><label>Present Eductional Status</td>
+	                <td><input type="text" name="pes" id="pes"/></td>
+	            </tr>
+
+	                <tr>
+	                    <td><label>University</td>
+	                    <td><input type="text" name="university" id="university"/></td>
+	                </tr>
+	        </table>
+
+
+	    </div>
+	    <div id="entrepreneur" style="display:none;color:brown">
+	        ENTREPRENEUR DETAILS
+	        <table>
+	            <tr>
+	                <td><label>Type of Business</td>
+	                <td><input type="text" name="business" id="business"/></td>
+	            </tr>
+	            <tr>
+	            <td><label>Company Name</td>
+	            <td><input type="text" name="company" id="company"/></td>
+	            </tr>
+	        </table>
+
+	    </div>
+	    <div id="employee" style="display:none;color:brown">
+	        EMPLOYEE DETAILS
+	        <table>
+	            <tr>
+	                <td><label>Occupation</td>
+	                <td><input type="text" name="Occupation" id = "Occupation"/></td>
+	            </tr>
+	            <tr>
+	                <td><label>Department</td>
+	                <td><input type="text" name="Department" id ="Department" /></td>
+	            </tr>
+	        </table>
+
+	    </div>
+	    <div id="homemaker" style="display:none;color:brown"></div>
+	    <div id="retired" style="display:none;color:brown"></div>
+	</center>
+
+
+
+<div class="row">
+	<!-- <div class="offset-md-1"></div> -->
+	<div class="col-md-5">
+		<div class="row">
+		    <div class="col-md-6"><label>ContactNumber:</label></div>
+		    <div class="col-md-6"><input type="text" name="ContactNumber" id="ContactNumber" required></div>
+		</div>
+
+		<div class="row">
+		    <div class="col-md-6"><label>EmailId:</label></div>
+		    <div class="col-md-6"><input type="text" name="emailid"  id="emailid"></div>
+		</div>
+
+		<div class="row">
+		    <div class="col-md-6"><label>Username:</label></div>
+		    <div class="col-md-6"><input type="text" name="username" id="Username"></div>
+		</div>
+
+		<div class="row">
+		    <div class="col-md-6"><label>Password</label></div>
+		    <div class="col-md-6"><input type="password" name="password" id="password"></div>
+		</div>
+
+		<div class="row">
+		    <div class="col-md-6"><label>ConfirmPassword</label></div>
+		    <div class="col-md-6"><input type="password" name="pwd" id="pwd"></div>
+		</div>
+
+	</div>
+	<div class="offset-md-1"></div>
+	<div class="col-md-5">
+		<strong><label>Fellow Alumni Details:</label></strong>
+		<div class="row">
+			<div class="col-md-6"><label>Name:</label></div>
+			<div class="col-md-6"><input type="text" name="Name"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6"><label>mobilenumber:</label></div>
+			<div class="col-md-6"><input type="text" name="mobile" id="mobile"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-6"><label>Email:</label></div>
+			<div class="col-md-6"><input type="text" name="EmailId" id="email"></div>
+		</div>
+	</div>
+	
+</div>
+
+
+<div class="row">
+	<div class="offset-md-4"></div>
+    <div class="col-md-2">
+    	<button type ="reset" value="RESET" style="border-radius: 10px">Reset</button>
+    </div>
+    <div class="col-md-2">
+    	<!--input type="submit" name="submit" value="submit"> </input-->
+      <button type="submit" value="submit" style="border-radius: 10px">Submit</button>
+
+    </div>
+	<div class="offset-md-4"></div>
+</div>
+</form>
+ 
+<!--     <table align=center>
+             <tr>
+                 <td><label>ContactNumber:</td>
+                 <td><input type="text" name="ContactNumber" id="MobileNumber" required></td>
+             </tr>
+             <tr>
+                 <td><label>EmailId:</td>
+                 <td><input type="text" name="emailid"  id="emailid"></td>
+             </tr>
+            <tr>
+                 <td><label>Username:</td>
+                 <td><input type="text" name="username" id="Username"></td>
+            </tr>
+            <tr>
+                <td><label>Password</td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label>ConfirmPassword</td>
+                <td><input type="password" name="pwd" id="pwd"></td>
+            </tr>
+            <tr>
+                <td><strong><label>Fellow Alumni Details:</strong></td>
+                	<td></td>
+            </tr>
+            <tr>
+                <td><label>Name:</td>
+                <td><input type="text" name="Name"></td>
+            </tr>
+            <tr>
+            	<td><label>mobilenumber:</td>
+                <td><input type="Number" name="mobile" id="mobile"></td>
+            </tr>
+            <tr>
+                <td><label>Email:</td>
+                <td><input type="email" name="EmailId" id="email"></td>
+             </tr>
+            <tr>
+                <td><button type ="reset" value="RESET">Reset</button></td>
+                <td><a  href="login.html"><button type="submit"  onClick="return valid();">submit</a></td>
+
+            </tr>
+       </table> -->
+<!--        <center>
+       	       <pclass="Message">AlreadyRegistered?</p>
+               <a    href ="login.html"><input type="button" value="Login" ></a>
+       </center> -->
+   
+   
+    <script type="text/javascript">
+     function valid()
+      {
+        var x = document.getElementById("fields").selectedIndex;
+        var val = document.getElementsByTagName("option")[x].value;
+        alert(val);
+        if(val == ''){
+          alert("Please Select************** your present status=========");
+        }
+
+        /*var pes=document.getElementById('pes');
+          if(pes.value=='')
+          {
+            alert("please select your present status");
+            pes.focus();
+            return false;
+          }*/
+       var u=document.getElementById("Username");
+       if(u.value==''||u.value.length<8)
+       {
+        alert("username should be atleast 8 characters");
+        u.focus();
+        return false;  
+       }
+       var p=document.getElementById("password");
+       if(p.value==''||p.value.length<8)
+       {
+        alert("password should be of atleast 8 characters");
+        p.focus();
+        return false;
+       }
+       var pd=document.getElementById("pwd");
+       if(pd.value!=p.value)
+       {
+        alert("please check the password");
+        pd.focus();
+        return false;
+       } 
+       var m=document.getElementById("ContactNumber");
+       if(m.value=='')
+       {
+	        alert("please  enter the mobile number");
+	        m.focus();
+	        return false; 
+       }
+       if(isNaN(m.value))
+       {
+       	alert("mobile number should be in numeric");
+       	m.focus();
+       	return false;
+       }
+       var mob=document.getElementById("mobile");
+       if(isNaN(mob.value))
+       {
+       	alert("mobile number should be in numeric");
+       	mob.focus();
+       	return false;
+       }
+       /*var field=document.getElementById("fields");
+       	if(field.value=='0')
+       	{
+       		alert("please fill your present status");
+       		field.focus();
+       		return false;
+       	}*/
+
+
+       var e=document.getElementById("emailid");
+       if(e.value=='')
+       {
+       	alert("please enter emailid");
+       	e.focus();
+       	return false;
+       }
+       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.value))
+       {
+        return (true);
+       }
+       else
+       {
+        alert("You have entered an invalid email address!");
+        e.focus();
+        return (false);
+       }
+
+       return true;
+     }
+    function getFields()
+		{
+			// ids should be in lowercase and fields should be as in the dropdown menu
+		    var x = document.getElementById('fields').value;
+		    var all_fields = ['student', 'entrepreneur', 'homemaker', 'retired', 'Employee']
+		    for(i=0;i<all_fields.length;i++){
+		    	if (all_fields[i].toLowerCase() == x.toLowerCase())
+		    		document.getElementById(all_fields[i].toLowerCase()).style.display = ""
+		    	else if (x != "0" & all_fields[i].toLowerCase() != x.toLowerCase())
+		    		document.getElementById(all_fields[i].toLowerCase()).style.display = "none"
+		    	else
+		    		document.getElementById(all_fields[i].toLowerCase()).style.display = "none"
+		    }
+       // var mob=document.getElementById("mobile");
+       // if(mob.value=='')
+       // {
+       //  alert("please enter mobile number");
+       //  mob.focus();
+       //  return false; 
+       // }
+
+		}
+
+    </script>
+  </body>
+</html>

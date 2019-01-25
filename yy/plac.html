@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> alumini portal</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animated.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  </head>
+<body>
+
+<!--  Header Section of the website -->
+<div class="container-fluid">
+  <div class="row" id="header-section">
+    <div class="col-md-3" id="site_logo">
+      <img src="img/1.jpg" alt="site_logo" class="img-responsive" style="width:40%; height:40%;">
+    </div>
+    <div class="col-md-5 animated tada" id="site_title">
+      <h2>Viveka Alumni</h2>
+    </div>
+    <div class="col-md-4">
+      <form name="search-form">
+        <div class="form-group">
+        <input type="text" name="search_bar" class="form-control" placeholder="Search here" id="search_box">
+        <button class="btn btn-primary" id="search_button">Search</button>
+      </div>
+      </form>
+      
+    </div>
+  </div>
+  
+</div>
+<!-- end of the header section -->
+
+<!--color band-->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+    </div>
+    <ul class="nav navbar-nav">
+      <li clas><a href="#">Home</a></li>
+      <li><a href="#">Job Posting</a></li>
+      <li><a href="#">Job Display</a></li>
+      <li><a href="#">Job Application</a></li>
+       <li><a href="#">About us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--  placement page -->
+   <div class="placement">
+   <div class="container">
+   <div class="row">
+
+  <div class="col-md-2"></div>
+  <div class="col-md-8 pla">
+   <div class="col-md-2"></div> 
+  <div class="row">
+   <h2 align="center">Placement</h2><br>
+
+     <form action="localhost/aes/u1.php" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"   
+
+   
+    <div class="form-group">
+    </div>
+
+   
+    <div class="form-group">
+    <label for="name" class="col-sm-5 control-label">CompanyName :</label>
+    <input type="text" class="form-inline" placeholder="Enter  Your company name" name="companyname" required  value="<?php echo $CompanyName;?>" >
+
+  <span class="error">* <?php echo $CompanyNameErr;?></span> 
+
+    </div>
+
+
+  <div class="form-group">
+  <label for="name" class="col-sm-5 control-label">Qualification:</label>
+  <input type="text" class="form-inline" placeholder="Enter your Qualification" name="qualification" required  value="<?php echo $Qualification;?>">
+
+  <span class="error">* <?php echo $QualificationErr;?></span>
+  </div>
+
+   <div class="form-group">
+  <label for="name" class="col-sm-5 control-label">JobTitle:</label>
+  <input type="text" class="form-inline"  placeholder="Enter your Job Title"  name="jobtitle" required  value="<?php echo $JobTitle;?>">
+
+  <span class="error">* <?php echo $JobTitleErr;?></span> 
+ 
+  </div> 
+
+   
+   <div class="form-group">
+  <label for="name" class="col-sm-5 control-label">JobLink:</label>
+  <input type="text" class="form-inline" placeholder="Enter your Joblink" name="joblink" required  value="<?php echo $JobTitle;?>">
+
+  <span class="error">* <?php echo $JobTitleErr;?></span>  
+  </div>
+
+  <div class="form-group">
+  <label for="name" class="col-sm-5 control-label">JobLocation:</label>
+  <input type="text" class="form-inline" placeholder="Enter your Joblocation"  name="joblocation" required value="<?php echo $JobLocation;?>">
+
+  <span class="error">* <?php echo $JobLocationErr;?></span>  
+  </div>
+
+  <div class="form-group">
+  <label for="name" class="col-sm-5 control-label">ApplicationDeadline:</label>
+  <input type="date" class="form-inline" name="applicationdeadline" value ="2000-12-12" required value="<?php echo $ApplicationDeadline;?>">
+
+  <span class="error">* <?php echo $ApplicationDeadlineErr;?></span>  
+  </div>
+
+            <script>
+              function myfunction() {
+                var x = document.getElementById("mydate").value;
+                document.getElementById("demo").innerhtml = x;
+              }
+            </script>
+
+
+
+
+
+
+
+    <div class="form-group">
+   <button type="search" class="btn btn-default"  id="su_m">Submit</button>
+   </div>
+
+
+
+
+  
+</div> 
+</form> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</body>
+</html>  
+</div>
+</div>
+</div>
+<<div class="container-fluid" id="footer_bar">
+  <h2> 
+  <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://plus.google.com" class="google"><i class="fa fa-google-plus"></i></a>
+  <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin-square"></i></a></h2>
+</div>
+</body>
+</html>
+
+
+
+
+

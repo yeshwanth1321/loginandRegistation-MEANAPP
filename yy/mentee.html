@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alumini portal</title>
+
+    <!-- Bootstrap -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animated.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+</head>
+<body>
+
+<!--  Header Section of the website -->
+<div class="container-fluid">
+  <div class="row" id="header-section">
+    <div class="col-md-3" id="site_logo">
+      <img src="img/1.jpg" alt="site_logo" class="img-responsive" style="width:40%; height:40%;">
+    </div>
+    <div class="col-md-5" id="site_title">
+      <h2>Viveka Alumni</h2>
+    </div>
+    <div class="col-md-4">
+      <form name="search-form">
+        <div class="form-group">
+        <input type="text" name="search_bar" class="form-control" placeholder="Search here" id="search_box">
+        <button class="btn btn-primary" id="search_button">Search</button>
+      </div>
+      </form>
+      
+    </div>
+  </div>
+  
+</div>
+
+<!-- end of the header section -->
+
+<!-- color band -->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+    </div>
+    <ul class="nav navbar-nav">
+      <li clas><a href="#">Home</a></li>
+      <li><a href="mentor.html">Mentor</a></li>
+      <li><a href="#">Mentee</a></li>
+      <li><a href="#">About us</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<div class ="container">
+   <h3 align="center">Mentor Page</h3></br>
+   <h4>Mentor/Mentee</h4></br>
+
+  <div class="container">
+  <div class="row">
+        <div class="control-group" id="fields">
+            <label class="control-label" for="field1">Nice Multiple Form Fields</label>
+            <div class="controls"> 
+                <form role="form" autocomplete="off">
+                    <div class="entry input-group col-xs-3">
+                        <input class="form-control" name="fields[]" type="text" placeholder="Type something" />
+                      <span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            <br>
+            <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>
+            </div>
+        </div>
+  </div>
+
+<script>$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+    $(this).parents('.entry:first').remove();
+
+    e.preventDefault();
+    return false;
+  });
+});
+</script>
+
+<div class="container">
+    <br>
+  <div class="row">
+
+        <div class="dual-list list-left col-md-5">
+            <div class="well text-right">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-search"></span>
+                            <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="btn-group">
+                            <a class="btn btn-default selector" title="select all"><i class="glyphicon glyphicon-unchecked"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">menteelist <a href="https://github.com/bbilginn/bootstrap-duallist" target="_blank">mentee</a></li>
+                    <li class="list-group-item">Mentee </li>
+                    <li class="list-group-item">Mentee</li>
+                    <li class="list-group-item">Mentee</li>
+                    <li class="list-group-item">Mentee</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="list-arrows col-md-1 text-center">
+            <button class="btn btn-default btn-sm move-left">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+
+            <button class="btn btn-default btn-sm move-right">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+
+        <div class="dual-list list-right col-md-5">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="btn-group">
+                            <a class="btn btn-default selector" title="select all"><i class="glyphicon glyphicon-unchecked"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                            <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                            <span class="input-group-addon glyphicon glyphicon-search"></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">Mentee name1</li>
+                    <li class="list-group-item">Mentee name2</li>
+                    <li class="list-group-item">Mentee name3</li>
+                    <li class="list-group-item">Mentee name4</li>
+                    <li class="list-group-item">Mentee name5</li>
+                </ul>
+            </div>
+        </div>
+
+<script >
+    $(function () {
+
+            $('body').on('click', '.list-group .list-group-item', function () {
+                $(this).toggleClass('active');
+            });
+            $('.list-arrows button').click(function () {
+                var $button = $(this), actives = '';
+                if ($button.hasClass('move-left')) {
+                    actives = $('.list-right ul li.active');
+                    actives.clone().appendTo('.list-left ul');
+                    actives.remove();
+                } else if ($button.hasClass('move-right')) {
+                    actives = $('.list-left ul li.active');
+                    actives.clone().appendTo('.list-right ul');
+                    actives.remove();
+                }
+            });
+            $('.dual-list .selector').click(function () {
+                var $checkBox = $(this);
+                if (!$checkBox.hasClass('selected')) {
+                    $checkBox.addClass('selected').closest('.well').find('ul li:not(.active)').addClass('active');
+                    $checkBox.children('i').removeClass('glyphicon-unchecked').addClass('glyphicon-check');
+                } else {
+                    $checkBox.removeClass('selected').closest('.well').find('ul li.active').removeClass('active');
+                    $checkBox.children('i').removeClass('glyphicon-check').addClass('glyphicon-unchecked');
+                }
+            });
+            $('[name="SearchDualList"]').keyup(function (e) {
+                var code = e.keyCode || e.which;
+                if (code == '9') return;
+                if (code == '27') $(this).val(null);
+                var $rows = $(this).closest('.dual-list').find('.list-group li');
+                var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+                $rows.show().filter(function () {
+                    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+                    return !~text.indexOf(val);
+                }).hide();
+            });
+
+        });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid" id="footer_bar">
+  <h2> 
+  <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://plus.google.com" class="google"><i class="fa fa-google-plus"></i></a>
+  <a href="https://www.linkedin.com" class="linkedin"><i class="fa fa-linkedin-square"></i></a></h2>
+
+   
+</div>
+</body>
+</html>
